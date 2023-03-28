@@ -1,15 +1,15 @@
 const express = require("express");
 const app = express();
 
+const get_routes = require("./routes/products");
 
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) =>{
     res.send("Hello Bhaiya jii");
 });
- console.log("hello world");
- console.log("hii");
 
+app.use("/api/products", get_routes);
 const start = async() =>{
     try{
         app.listen(PORT, () =>{
