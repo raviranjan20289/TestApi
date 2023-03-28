@@ -7,7 +7,8 @@ const PORT = process.env.PORT || 5000;
 app.get("/", (req, res) =>{
     res.send("Hello Bhaiya jii");
 });
- 
+ console.log("hello world");
+ console.log("hii");
 
 const start = async() =>{
     try{
